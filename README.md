@@ -266,13 +266,18 @@ db.restaurants.findOne( {restaurant_id: "30112340" })
 db.restaurants.findOne( {name: "May May Kitchen" })
 ```
 - Find the restaurants where their cuisine is `Tapas`.
-`db.restaurants.find( { cuisine: "Tapas" })`
+```sh
+db.restaurants.find( { cuisine: "Tapas" })
+```
 - Find the restaurants in postal code `11208`.
-`db.restaurants.find( { "address.zipcode" : "11208" })`
+```sh
+db.restaurants.find( { "address.zipcode" : "11208" })
+```
 - Find all restaurants that have a score greater or equal than `70`.
-`db.restaurants.find( { "grades.score" : { $gt : 70 } })`
+```sh
+db.restaurants.find( { "grades.score" : { $gt : 70 } })
+```
 - Find all restaurants in `Brooklyn`that have a score greater than `80`
-`db.restaurants.find( { "grades.score" : { $gt : 70 } })`
 - All restaurants with `Chilean` or `Czech` cuisine.
 - All restaurants with grade `A` in **second** position of the array.
 - All restaurants with grades `A` or `B`.
