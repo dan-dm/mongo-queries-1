@@ -258,6 +258,24 @@ Value | Order | Example
 Practice the following queries:
 
 - Find the restaurant with id `30112340`.
+```sh
+db.restaurants.findOne( {restaurant_id: "30112340" })
+{ _id: ObjectId("617be2a879c37190f18b3de5"),
+  address: 
+   { building: '469',
+     coord: [ -73.961704, 40.662942 ],
+     street: 'Flatbush Avenue',
+     zipcode: '11225' },
+  borough: 'Brooklyn',
+  cuisine: 'Hamburgers',
+  grades: 
+   [ { date: 2014-12-30T00:00:00.000Z, grade: 'A', score: 8 },
+     { date: 2014-07-01T00:00:00.000Z, grade: 'B', score: 23 },
+     { date: 2013-04-30T00:00:00.000Z, grade: 'A', score: 12 },
+     { date: 2012-05-08T00:00:00.000Z, grade: 'A', score: 12 } ],
+  name: 'Wendy\'S',
+  restaurant_id: '30112340' }
+```
 - Find `May May Kitchen`.
 - Find the restaurants where their cuisine is `Tapas`.
 - Find the restaurants in postal code `11208`.
