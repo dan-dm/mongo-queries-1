@@ -260,43 +260,10 @@ Practice the following queries:
 - Find the restaurant with id `30112340`.
 ```sh
 db.restaurants.findOne( {restaurant_id: "30112340" })
-
-{ _id: ObjectId("617be2a879c37190f18b3de5"),
-  address: 
-   { building: '469',
-     coord: [ -73.961704, 40.662942 ],
-     street: 'Flatbush Avenue',
-     zipcode: '11225' },
-  borough: 'Brooklyn',
-  cuisine: 'Hamburgers',
-  grades: 
-   [ { date: 2014-12-30T00:00:00.000Z, grade: 'A', score: 8 },
-     { date: 2014-07-01T00:00:00.000Z, grade: 'B', score: 23 },
-     { date: 2013-04-30T00:00:00.000Z, grade: 'A', score: 12 },
-     { date: 2012-05-08T00:00:00.000Z, grade: 'A', score: 12 } ],
-  name: 'Wendy\'S',
-  restaurant_id: '30112340' }
 ```
 - Find `May May Kitchen`.
 ```sh
 db.restaurants.findOne( {name: "May May Kitchen" })
-
-{ _id: ObjectId("617be2a879c37190f18b3df9"),
-  address: 
-   { building: '1269',
-     coord: [ -73.871194, 40.6730975 ],
-     street: 'Sutter Avenue',
-     zipcode: '11208' },
-  borough: 'Brooklyn',
-  cuisine: 'Chinese',
-  grades: 
-   [ { date: 2014-09-16T00:00:00.000Z, grade: 'B', score: 21 },
-     { date: 2013-08-28T00:00:00.000Z, grade: 'A', score: 7 },
-     { date: 2013-04-02T00:00:00.000Z, grade: 'C', score: 56 },
-     { date: 2012-08-15T00:00:00.000Z, grade: 'B', score: 27 },
-     { date: 2012-03-28T00:00:00.000Z, grade: 'B', score: 27 } ],
-  name: 'May May Kitchen',
-  restaurant_id: '40358429' }
 ```
 - Find the restaurants where their cuisine is `Tapas`.
 `db.restaurants.find( { cuisine: "Tapas" })`
